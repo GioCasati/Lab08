@@ -36,7 +36,7 @@ class View(ft.UserControl):
 
         # ROW with controls
         img_path = os.path.join(os.getcwd(), 'UI/NERC-map.png')
-        self._logo = ft.Image(src=img_path,
+        self._logo = ft.Image(src=img_path,             # img_path
                               width=500,
                               height=500,
                               )
@@ -50,8 +50,8 @@ class View(ft.UserControl):
 
         row1 = ft.Row([
             ft.Column([self._logo]),
-            ft.Column([self._ddNerc, self._txtYears, self._txtHours, self._btnWorstCase], spacing=60)
-        ],alignment=ft.MainAxisAlignment.CENTER, spacing=30)
+            ft.Column([self._ddNerc, self._txtYears, self._txtHours, self._btnWorstCase], spacing=60)]
+            ,alignment=ft.MainAxisAlignment.CENTER, spacing=30)
         self._page.add(row1)
 
         self._controller.fillDD()
